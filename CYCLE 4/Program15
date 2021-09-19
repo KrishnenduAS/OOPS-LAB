@@ -6,7 +6,7 @@ class MyException extends Exception {
 	}
 }
 
-class Program_15 {
+class Program15 {
 	public static void main(String args[]) {
 		int totalNums;
 		int i;
