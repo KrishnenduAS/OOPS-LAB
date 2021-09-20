@@ -1,4 +1,4 @@
-import package.*;
+import package1.*;
 
 public class main_graphics {
     public static void main(String []args){
