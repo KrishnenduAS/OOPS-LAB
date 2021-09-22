@@ -2,7 +2,7 @@ import package2.*;
 
 class main_arithmetic {
     public static void main(String []args){
-        arithamatic_package testObj = new arithamatic_package();
+        arithmetic_package testObj = new arithmetic_package();
         System.out.println(testObj.add(1,2));
         System.out.println(testObj.substract(1,2));
         System.out.println(testObj.multiple(1,2));
