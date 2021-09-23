@@ -4,11 +4,7 @@ class Employee
 	protected int empid,salary;
 	protected String name,address;
 	Scanner sc=new Scanner(System.in);
-	Employee()
-	{
-		empid=salary=0;
-		name=address="";
-	}
+	
 	Employee(int id,String n,int sal,String ad)
 	{
 		empid=id;
