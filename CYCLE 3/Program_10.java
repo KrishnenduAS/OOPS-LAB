@@ -1,14 +1,9 @@
 import java.util.*;
 class Employee
 {
-	protected int empid,salary;
-	protected String name,address;
+	int empid,salary;
+	String name,address;
 	Scanner sc=new Scanner(System.in);
-	Employee()
-	{
-		empid=salary=0;
-		name=address="";
-	}
 	Employee(int id,String n,int sal,String ad)
 	{
 		empid=id;
@@ -44,27 +39,25 @@ class Program_10
 {
 	public static void main(String[] args)
 	{
-		int n,empid,salary;
-		String name,address,dpmt,sub;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter Number of Teachers:");
-		n=Integer.parseInt(sc.nextLine());
+	    int n=sc.nextInt();
 		Teacher t[]=new Teacher[n];
 		for(int i=0;i<n;i++)
 		{
 			System.out.println("\n--Enter details of Teacher "+(i+1)+"--\n");
 			System.out.print("Enter Employee ID:");
-			empid=Integer.parseInt(sc.nextLine());
+			int empid=sc.nextInt();
 			System.out.print("Enter Employee Name:");
-			name=sc.nextLine();
+			String name=sc.nextLine();
 			System.out.print("Enter Salary:");
-			salary=Integer.parseInt(sc.nextLine());
+			int salary=sc.nextInt();
 			System.out.print("Enter Address:");
-			address=sc.nextLine();
+			String address=sc.nextLine();
 			System.out.print("Enter Department:");
-			dpmt=sc.nextLine();
+			String dpmt=sc.nextLine();
 			System.out.print("Enter Subject:");
-			sub=sc.nextLine();
+			String sub=sc.nextLine();
 			t[i]=new Teacher(empid,name,salary,address,dpmt,sub);
 		}
 		for(int i=0;i<n;i++)
