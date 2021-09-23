@@ -1,72 +1,74 @@
 import java.util.*;
-class Employee
+class employee
 {
-	protected int empid,salary;
-	protected String name,address;
-	Scanner sc=new Scanner(System.in);
-	
-	Employee(int id,String n,int sal,String ad)
-	{
-		empid=id;
-		name=n;
-		salary=sal;
-		address=ad;
-	}
-	void disp()
-	{
-		System.out.println("EMPLOYEE  ID  ="+empid);
-		System.out.println("EMPLOYEE NAME ="+name);
-		System.out.println("SALARY        ="+salary);
-		System.out.println("ADDRESS       ="+address);
-	}
+    int empid,sal;
+    String name,add;
+    employee(int e,String n,int s,String a)
+    {
+        empid=e;
+        name=n;
+        sal=s;
+        add=a;
+    }
+    void disp()
+    {
+        System.out.println("Emp  id :"+empid);
+        System.out.println("Name  :"+name);
+        System.out.println("Salary :"+name);
+        System.out.println("Address :"+name);
+    }
 }
-class Teacher extends Employee
+class teacher extends employee
 {
-	String dpmt,sub;
-	Teacher(int id,String n,int sal,String ad,String d,String s)
-	{
-		super(id,n,sal,ad);
-		dpmt=d;
-		sub=s;
-	}
-	void disp()
-	{
-		super.disp();
-		System.out.println("DEPARTMENT    ="+dpmt);
-		System.out.println("SUBJECT       ="+sub);
-	}
+    String dept;
+    String sub;
+    teacher(int e,String n,int s,String a,String d,String su)
+    {
+        super(e,n,s,a);
+        dept=d;
+        sub=su;
+    }
+    void disp()
+    {
+        super.disp();
+         System.out.println("Department  :"+dept);
+         System.out.println("Subject :"+sub);
+    }
 }
 class Program_10
 {
-	public static void main(String[] args)
-	{
-		int n,empid,salary;
-		String name,address,dpmt,sub;
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Number of Teachers:");
-		n=Integer.parseInt(sc.nextLine());
-		Teacher t[]=new Teacher[n];
-		for(int i=0;i<n;i++)
-		{
-			System.out.println("\n--Enter details of Teacher "+(i+1)+"--\n");
-			System.out.print("Enter Employee ID:");
-			empid=Integer.parseInt(sc.nextLine());
-			System.out.print("Enter Employee Name:");
-			name=sc.nextLine();
-			System.out.print("Enter Salary:");
-			salary=Integer.parseInt(sc.nextLine());
-			System.out.print("Enter Address:");
-			address=sc.nextLine();
-			System.out.print("Enter Department:");
-			dpmt=sc.nextLine();
-			System.out.print("Enter Subject:");
-			sub=sc.nextLine();
-			t[i]=new Teacher(empid,name,salary,address,dpmt,sub);
-		}
-		for(int i=0;i<n;i++)
-		{
-			System.out.println("\n----------\nEMPLOYEE "+(i+1)+"\n---------- ");
-			t[i].disp();
-		}
-	}
+public static void main (String[] args) {
+    int n,empid,sal;
+    String name,add,dept,sub;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter no of teacher:" );
+    n=Integer.parseInt(sc.nextLine());
+    teacher[] t=new teacher[n];
+    for(int i=0;i<n;i++)
+    {
+        System.out.println("Enter Details of "+(i+1)+ "Employee");
+        System.out.print(" Enter  Name  :");
+        name=sc.nextLine();
+        System.out.print("Enter id      :");
+        empid=Integer.parseInt(sc.nextLine());
+        System.out.print("Enter salary  :");
+        sal=Integer.parseInt(sc.nextLine());
+        System.out.print(" Enter Address:");
+        add=sc.nextLine();
+        System.out.print("Enter Department:");
+        dept=sc.nextLine();
+        System.out.print("Enter Subject:");
+        sub=sc.nextLine();
+        t[i]=new teacher(empid,name,sal,add,dept,sub);
+        
+         
+         
+    }
+    for(teacher i:t)
+    {
+        
+        i.disp();
+        System.out.println("Details");
+    }    
+}
 }
