@@ -3,7 +3,6 @@ class Employee
 {
 	int empid,salary;
 	String name,address;
-	Scanner sc=new Scanner(System.in);
 	Employee(int id,String n,int sal,String ad)
 	{
 		empid=id;
