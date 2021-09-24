@@ -1,10 +1,10 @@
 package package1;
 
 interface interface_graphics{
-   public float recArea(int l, int h);
-   public float cirArea(int r);
-   public float squArea(int a);
-   public float triArea(int l, int h);
+   float recArea(int l, int h);
+   float cirArea(int r);
+   float squArea(int a);
+   float triArea(int l, int h);
 }
 
 public class package_graphics implements interface_graphics {
