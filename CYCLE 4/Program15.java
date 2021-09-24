@@ -1,8 +1,8 @@
 import java.util.*;
 
-class MyException extends Exception {
-	public MyException(String value) {
-		super(value);
+class MyEx extends Exception {
+     MyEx(String s) {
+		super(s);
 	}
 }
 
@@ -20,20 +20,17 @@ class Program15 {
 			try {
 				temp = Integer.parseInt(sc.nextLine());
 				if (temp > 0) {
-					sum += temp;
-					count += 1;
+					sum =sum + temp;
+					count=count+1;
 				} else {
-					throw new MyException(Integer.toString(temp));
+				    totalNums++;
+					throw new MyEx("- Not a positive number\n");
 				}
-			} catch (MyException ex) {
-				System.out.print(ex.getMessage());
-				System.out.println(" - Not a positive number");
+			} catch (MyEx ex) {
+				System.out.print(ex);
+			
 			}
 		}
-		System.out.print("Count : ");
-		System.out.println(count);
-		System.out.print("sum: ");
-		System.out.println(sum);
 		System.out.print("Average : ");
 		System.out.println(sum / count);
 
